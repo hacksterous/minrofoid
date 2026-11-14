@@ -8,7 +8,9 @@ PlasmoidItem {
     id: root
 
     // Replace with your Linux shell command
-    readonly property string shellCommand: "rofi -show drun"
+    //readonly property string shellCommand: "kstart -- rofi -show drun"
+	//readonly property string shellCommand: "setsid rofi -show drun >/dev/null 2>&1 &"
+	readonly property string shellCommand: "setsid rofi -show drun -drun-use-desktop-cache -no-lazy-grab >/dev/null 2>&1 &"
 
     // Allows the widget to expand and match native panel icon sizes
     Plasmoid.constraintHints: Plasmoid.CanFillArea
